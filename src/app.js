@@ -203,7 +203,7 @@ var cubeDisplay = function() {
     var projMatrix = new Float32Array(16);
     identityMat4(worldMatrix);
     lookAtPosition(viewMatrix, [0, 0, -3], [0,0,0], [0,1,0]);
-    perspectiveProjection(projMatrix, glMatrix.glMatrix.toRadian(45), canvas.width / canvas.clientHeight, 0.1, 1000.0);
+    perspectiveProjection(projMatrix, 0.785398, canvas.width / canvas.clientHeight, 0.1, 1000.0);
 
     gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
     gl.uniformMatrix4fv(matViewUniformLocation, gl.FALSE, viewMatrix);
@@ -375,7 +375,7 @@ var pyramidDisplay = function() {
     var projMatrix = new Float32Array(16);
     identityMat4(worldMatrix);
     lookAtPosition(viewMatrix, [0, 0, -3], [0,0,0], [0,1,0]);
-    perspectiveProjection(projMatrix, glMatrix.glMatrix.toRadian(45), canvas.width / canvas.clientHeight, 0.1, 1000.0);
+    perspectiveProjection(projMatrix, 0.785398, canvas.width / canvas.clientHeight, 0.1, 1000.0);
 
     gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
     gl.uniformMatrix4fv(matViewUniformLocation, gl.FALSE, viewMatrix);
